@@ -4,34 +4,35 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.useAppStore = exports.useAppSelector = exports.useAppDispatch = exports.makeStore = exports.actions = void 0;
-var globalStates = [
-    // example state 1
-    {
-        name: "exampleCounter",
-        initialState: { exampleValue: 0 },
-        reducers: {
-            exampleSetValue: function (state, action) {
-                state.exampleValue = action.payload;
-            },
-            exampleIncrease: function (state) {
-                state.exampleValue = state.exampleValue + 1;
-            },
-            exampleDecrease: function (state) {
-                state.exampleValue = state.exampleValue - 1;
-            },
-        },
-    },
-    // example state 2
-    {
-        name: "exampleString",
-        initialState: { value: "Hello world" },
-        reducers: {
-            exampleSetValue: function (state, action) {
-                state.value = action.payload;
-            },
-        },
-    },
-];
+var globalStates_1 = require("@/app/globalStates");
+// const globalStates = [
+//   // example state 1
+//   {
+//     name: "exampleCounter",
+//     initialState: { exampleValue: 0 },
+//     reducers: {
+//       exampleSetValue: (state: any, action: PayloadAction) => {
+//         state.exampleValue = action.payload;
+//       },
+//       exampleIncrease: (state: any) => {
+//         state.exampleValue = state.exampleValue + 1;
+//       },
+//       exampleDecrease: (state: any) => {
+//         state.exampleValue = state.exampleValue - 1;
+//       },
+//     },
+//   },
+//   // example state 2
+//   {
+//     name: "exampleString",
+//     initialState: { value: "Hello world" },
+//     reducers: {
+//       exampleSetValue: (state: any, action: PayloadAction) => {
+//         state.value = action.payload;
+//       },
+//     },
+//   },
+// ];
 // ตัวอย่างการเรียกค่ากับการเซตค่าของ state ใน component
 // const dispatch = useAppDispatch(); เพื่อประกาศฟังก์ชันสำหรับการเรียกใช้ actions
 // const readState = useAppSelector((state:RootState) => state.exampleCounter.exampleValue); เพื่ออ่านค่า state
@@ -53,7 +54,7 @@ var react_redux_2 = require("react-redux");
 var reducers = {};
 var actions = {};
 exports.actions = actions;
-globalStates.forEach(function (item) {
+globalStates_1.default.forEach(function (item) {
     var slice = {
         name: item.name,
         initialState: item.initialState,

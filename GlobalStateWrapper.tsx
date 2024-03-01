@@ -3,34 +3,35 @@
 
 "use client";
 
-const globalStates = [
-  // example state 1
-  {
-    name: "exampleCounter",
-    initialState: { exampleValue: 0 },
-    reducers: {
-      exampleSetValue: (state: any, action: PayloadAction) => {
-        state.exampleValue = action.payload;
-      },
-      exampleIncrease: (state: any) => {
-        state.exampleValue = state.exampleValue + 1;
-      },
-      exampleDecrease: (state: any) => {
-        state.exampleValue = state.exampleValue - 1;
-      },
-    },
-  },
-  // example state 2
-  {
-    name: "exampleString",
-    initialState: { value: "Hello world" },
-    reducers: {
-      exampleSetValue: (state: any, action: PayloadAction) => {
-        state.value = action.payload;
-      },
-    },
-  },
-];
+import globalStates from "@/app/globalStates";
+// const globalStates = [
+//   // example state 1
+//   {
+//     name: "exampleCounter",
+//     initialState: { exampleValue: 0 },
+//     reducers: {
+//       exampleSetValue: (state: any, action: PayloadAction) => {
+//         state.exampleValue = action.payload;
+//       },
+//       exampleIncrease: (state: any) => {
+//         state.exampleValue = state.exampleValue + 1;
+//       },
+//       exampleDecrease: (state: any) => {
+//         state.exampleValue = state.exampleValue - 1;
+//       },
+//     },
+//   },
+//   // example state 2
+//   {
+//     name: "exampleString",
+//     initialState: { value: "Hello world" },
+//     reducers: {
+//       exampleSetValue: (state: any, action: PayloadAction) => {
+//         state.value = action.payload;
+//       },
+//     },
+//   },
+// ];
 
 // ตัวอย่างการเรียกค่ากับการเซตค่าของ state ใน component
 // const dispatch = useAppDispatch(); เพื่อประกาศฟังก์ชันสำหรับการเรียกใช้ actions
