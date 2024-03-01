@@ -47,7 +47,7 @@ export default function GlobalStateWrapper({
   return <Provider store={storeRef.current}>{children}</Provider>;
 }
 
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { Provider } from "react-redux";
 import { PayloadAction, configureStore, createSlice } from "@reduxjs/toolkit";
 import { useDispatch, useSelector, useStore } from "react-redux";
