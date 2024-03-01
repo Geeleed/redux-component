@@ -37,7 +37,7 @@ var globalStates_1 = require("@/app/globalStates");
 // const dispatch = useAppDispatch(); เพื่อประกาศฟังก์ชันสำหรับการเรียกใช้ actions
 // const readState = useAppSelector((state:RootState) => state.exampleCounter.exampleValue); เพื่ออ่านค่า state
 // <div onClick={() => dispatch(actions.exampleCounter.exampleSetValue(300))}>Set</div>
-function GlobalStateWraper(_a) {
+function GlobalStateWrapper(_a) {
     var children = _a.children;
     var storeRef = (0, react_1.useRef)();
     if (!storeRef.current)
@@ -46,7 +46,7 @@ function GlobalStateWraper(_a) {
       {children}
     </react_redux_1.Provider>);
 }
-exports.default = GlobalStateWraper;
+exports.default = GlobalStateWrapper;
 var react_1 = require("react");
 var react_redux_1 = require("react-redux");
 var toolkit_1 = require("@reduxjs/toolkit");

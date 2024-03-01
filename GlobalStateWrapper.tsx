@@ -38,7 +38,7 @@ import globalStates from "@/app/globalStates";
 // const readState = useAppSelector((state:RootState) => state.exampleCounter.exampleValue); เพื่ออ่านค่า state
 // <div onClick={() => dispatch(actions.exampleCounter.exampleSetValue(300))}>Set</div>
 
-export default function GlobalStateWraper({
+export default function GlobalStateWrapper({
   children,
 }: {
   children: React.ReactNode;
