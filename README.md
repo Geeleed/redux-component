@@ -13,6 +13,7 @@ const readState = useAppSelector((state:RootState) => state.exampleCounter.examp
 <div onClick={() => dispatch(actions.exampleCounter.exampleSetValue(300))}>Set</div>
 ```
 
+<!--
 สร้างไฟล์ globalStates.ts ไว้ที่ @/app แล้ว export default ตัวอย่างดังนี้
 
 ```bash
@@ -44,4 +45,4 @@ export default [
     },
   },
 ];
-```
+``` -->
